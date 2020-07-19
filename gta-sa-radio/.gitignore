@@ -1,0 +1,42 @@
+# Java related
+target/**
+*.jar
+*.class
+
+# eclipse specific
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# mp3-Files
+src/main/resources/Bounce FM/**
+src/main/resources/Commercials/**
+src/main/resources/CSR 103.2/**
+src/main/resources/K-DST/**
+src/main/resources/K-Jah West/**
+src/main/resources/K-Rose/**
+src/main/resources/Master Sounds 98.3/**
+src/main/resources/Play Back FM/**
+src/main/resources/Radio Los Santos/**
+src/main/resources/Radio X/**
+src/main/resources/SF-UR/**
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# MacOS specific
+**/.DS_Store
+/target/
