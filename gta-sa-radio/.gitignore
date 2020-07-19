@@ -19,17 +19,17 @@ local.properties
 .loadpath
 
 # mp3-Files
-src/main/resources/Bounce FM/**
-src/main/resources/Commercials/**
-src/main/resources/CSR 103.2/**
-src/main/resources/K-DST/**
-src/main/resources/K-Jah West/**
-src/main/resources/K-Rose/**
-src/main/resources/Master Sounds 98.3/**
-src/main/resources/Play Back FM/**
-src/main/resources/Radio Los Santos/**
-src/main/resources/Radio X/**
-src/main/resources/SF-UR/**
+src/main/resources/Bounce FM/*.mp3
+src/main/resources/Commercials/*.mp3
+src/main/resources/CSR 103.2/*.mp3
+src/main/resources/K-DST/*.mp3
+src/main/resources/K-Jah West/*.mp3
+src/main/resources/K-Rose/*.mp3
+src/main/resources/Master Sounds 98.3/*.mp3
+src/main/resources/Play Back FM/*.mp3
+src/main/resources/Radio Los Santos/*.mp3
+src/main/resources/Radio X/*.mp3
+src/main/resources/SF-UR/*.mp3
 
 # External tool builders
 .externalToolBuilders/
