@@ -126,6 +126,10 @@ public class RadioStationController {
 		
 		startRadioStream();
 	}
+
+	public void stopRadioStream() {
+		radioStream.stopMusicThread();
+	}
 	
 	/**
 	 * Get radio station name as text from enum

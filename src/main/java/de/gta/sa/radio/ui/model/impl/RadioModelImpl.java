@@ -29,9 +29,6 @@ public class RadioModelImpl implements RadioModel {
 	public void playClicked() {
 		controller.startRadioStream();
 		
-		gui.getRadioStationLabel().setText(controller.getActualRadioStationInfo());
-		//gui.getSongLabel().setText(controller.getActualSongInfo());
-		
 		gui.getPlayButton().setEnabled(false);
 		gui.getStopButton().setEnabled(true);
 		gui.getNextButton().setEnabled(true);
@@ -40,23 +37,24 @@ public class RadioModelImpl implements RadioModel {
 
 	@Override
 	public void stopClicked() {
-		System.exit(0);
+		controller.stopRadioStream();
+
+		gui.getPlayButton().setEnabled(true);
+		gui.getStopButton().setEnabled(false);
+		gui.getNextButton().setEnabled(false);
+		gui.getPreviousButton().setEnabled(false);
+
+		gui.getSongLabel().setText("music stopped");
 	}
 
 	@Override
 	public void nextClicked() {
 		controller.nextRadioStation();
-		
-		gui.getRadioStationLabel().setText(controller.getActualRadioStationInfo());
-		//gui.getSongLabel().setText(controller.getActualSongInfo());
 	}
 
 	@Override
 	public void previousClicked() {
 		controller.previousRadioStation();
-		
-		
-		//gui.getSongLabel().setText(controller.getActualSongInfo());
 	}
 
 	@Override

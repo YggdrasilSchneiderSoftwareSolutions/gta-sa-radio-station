@@ -6,7 +6,7 @@ target/**
 # eclipse specific
 .project
 .metadata
-bin/**
+bin/
 tmp/**
 tmp/**/*
 *.tmp
@@ -19,17 +19,17 @@ local.properties
 .loadpath
 
 # mp3-Files
-src/main/resources/Bounce FM/*.mp3
-src/main/resources/Commercials/*.mp3
-src/main/resources/CSR 103.2/*.mp3
-src/main/resources/K-DST/*.mp3
-src/main/resources/K-Jah West/*.mp3
-src/main/resources/K-Rose/*.mp3
-src/main/resources/Master Sounds 98.3/*.mp3
-src/main/resources/Play Back FM/*.mp3
-src/main/resources/Radio Los Santos/*.mp3
-src/main/resources/Radio X/*.mp3
-src/main/resources/SF-UR/*.mp3
+mp3/Bounce FM/*.mp3
+mp3/Commercials/*.mp3
+mp3/CSR 103.2/*.mp3
+mp3/K-DST/*.mp3
+mp3/K-Jah West/*.mp3
+mp3/K-Rose/*.mp3
+mp3/Master Sounds 98.3/*.mp3
+mp3/Play Back FM/*.mp3
+mp3/Radio Los Santos/*.mp3
+mp3/Radio X/*.mp3
+mp3/SF-UR/*.mp3
 
 # External tool builders
 .externalToolBuilders/

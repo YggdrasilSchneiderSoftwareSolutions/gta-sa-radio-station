@@ -13,7 +13,6 @@
 	</properties>
 
 	<dependencies>
-
 		<!-- https://mvnrepository.com/artifact/javazoom/jlayer -->
 		<dependency>
 			<groupId>javazoom</groupId>
@@ -33,7 +32,71 @@
 			<version>4.13</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Build an executable JAR -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<!-- lib folder must be in the directory of jar -->
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>de.gta.sa.radio.Application</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<!-- Copy all dependencies to lib folder -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.2</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Copy mp3 to output dir. This may take a while and is only necessary for publishing -->
+			<!-- You can copy the mp3 folder manually as well, otherwise change skip tag -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<skip>true</skip> <!-- change if necessary -->
+							<outputDirectory>${project.build.directory}/mp3</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/mp3</directory>
+									<!-- filtering must be false otherwise mp3 format gets corrupted -->
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>

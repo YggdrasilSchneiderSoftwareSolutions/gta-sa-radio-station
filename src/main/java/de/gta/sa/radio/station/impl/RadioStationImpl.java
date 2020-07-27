@@ -27,7 +27,7 @@ public class RadioStationImpl implements RadioStation {
 	
 	protected List<Song> songsPlayList;
 	
-	private static final String MP3_DIRECTORY = "src/main/resources/";
+	private static final String MP3_DIRECTORY = "mp3/";
 	
 	private String stationName;
 	
